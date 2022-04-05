@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-function HomePage(props) {
+function HomePage() {
   const [feedbackItems, setFeedbackItems] = useState([]);
   // feedbackItems = Array.from(props.feedbackItems);
 
