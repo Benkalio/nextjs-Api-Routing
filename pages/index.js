@@ -1,7 +1,8 @@
 import { useRef, useState } from 'react';
 
-function HomePage() {
+function HomePage(props) {
   const [feedbackItems, setFeedbackItems] = useState([]);
+  // feedbackItems = Array.from(props.feedbackItems);
 
   const emailInputRef = useRef();
   const feedbackInputRef = useRef();
@@ -53,7 +54,7 @@ function HomePage() {
       <hr />
       <button onClick={loadFeedbackHandler}>Load feedback</button>
       <ul>
-        {feedbackItems.map((item) => (
+        {feedbackItems && feedbackItems.map((item) => (
           <li key={item.id}>{item.text}</li>
         ))}
       </ul>

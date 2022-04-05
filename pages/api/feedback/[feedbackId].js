@@ -1,4 +1,5 @@
-import { buildFeedbackPath, extractFeedback } from './feedback';
+//DYNAMIC ROUTE
+import { buildFeedbackPath, extractFeedback } from '.';
 
 function handler(req, res) {
     // if(req.method === 'POST'){} 
