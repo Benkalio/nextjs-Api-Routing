@@ -27,15 +27,15 @@ function HomePage(props) {
       }
     })
       .then((response) => response.json())
-      .then((data) => {
-        setFeedbackItems(data.feedback);
-      });
+      .then((data) => console.log(data));
   }  
 
   function loadFeedbackHandler() {
     fetch('/api/feedback')
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        setFeedbackItems(data.feedback);
+      });
   }
   return (
     <div>
@@ -52,7 +52,7 @@ function HomePage(props) {
         <button>Send feedback</button>
       </form>
       <hr />
-      <button onClick={loadFeedbackHandler}>Load feedback</button>
+      <button onClick={loadFeedbackHandler}>Load Feedback</button>
       <ul>
         {feedbackItems && feedbackItems.map((item) => (
           <li key={item.id}>{item.text}</li>
