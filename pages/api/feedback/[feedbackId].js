@@ -2,8 +2,6 @@
 import { buildFeedbackPath, extractFeedback } from '.';
 
 function handler(req, res) {
-    // if(req.method === 'POST'){} 
-
     const feedbackId = req.query.feedbackId;
     const filePath = buildFeedbackPath();
     const feedbackData = extractFeedback(filePath);

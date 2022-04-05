@@ -2,7 +2,6 @@ import { useRef, useState } from 'react';
 
 function HomePage() {
   const [feedbackItems, setFeedbackItems] = useState([]);
-  // feedbackItems = Array.from(props.feedbackItems);
 
   const emailInputRef = useRef();
   const feedbackInputRef = useRef();
