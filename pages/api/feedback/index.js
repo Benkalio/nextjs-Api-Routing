@@ -25,7 +25,7 @@ export function handler(req, res) {
             text: feedbackText,
         };
 
-        //STORE THE DATA IN A FILE
+        //STORE THE DATA IN A FOLDER ~ FEEDBACK
         const filePath = buildFeedbackPath();
         const data = extractFeedback(filePath);
         data.push(newFeedback);
